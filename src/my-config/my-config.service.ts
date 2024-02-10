@@ -5,7 +5,7 @@ import { ConfigService } from '@nestjs/config';
 export class MyConfigService {
   constructor(private readonly configService: ConfigService) {}
 
-  //SQS Credentials 
+  //SQS Credentials
   getAWSSQSAccessID(): string {
     return this.configService.get<string>('aws_sqs_access_key_id');
   }
@@ -26,9 +26,7 @@ export class MyConfigService {
     return this.configService.get<string>('aws_sqs_queue_url');
   }
 
-
-
-  //SNS Credentials 
+  //SNS Credentials
   getAWSSNSAccessID(): string {
     return this.configService.get<string>('aws_sns_access_key_id');
   }
@@ -41,8 +39,6 @@ export class MyConfigService {
     return this.configService.get<string>('ADMIN_TOPIC_SNS_ARN');
   }
 
-
-
   //JWT CREDENTIALS
   getJwtAccessSecret(): string {
     return this.configService.get<string>('JWT_ACCESS_SECRET');
@@ -51,7 +47,6 @@ export class MyConfigService {
   getJwtRefreshSecret(): string {
     return this.configService.get<string>('JWT_REFRESH_SECRET');
   }
-
 
   //DATABASE CREDENTIALS
   getMongoUri(): string {
@@ -62,10 +57,8 @@ export class MyConfigService {
     return this.configService.get<string>('MONGO_ADMIN_DATABASE');
   }
 
-   //ENVIRONMENT CONFIG SETTINGS
-   getNodeEnv(): string {
+  //ENVIRONMENT CONFIG SETTINGS
+  getNodeEnv(): string {
     return this.configService.get<string>('NODE_ENV');
   }
-
-  
 }

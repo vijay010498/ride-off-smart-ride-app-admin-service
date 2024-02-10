@@ -18,7 +18,7 @@ import { SqsProcessorModule } from './sqs_processor/sqs_processor.module';
       envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
     CacheModule.register({
-      isGlobal: true, 
+      isGlobal: true,
     }),
     DevtoolsModule.registerAsync({
       imports: [MyConfigModule],
@@ -38,7 +38,7 @@ import { SqsProcessorModule } from './sqs_processor/sqs_processor.module';
     }),
     UserModule,
     SqsModule,
-    SqsProcessorModule
+    SqsProcessorModule,
   ],
   controllers: [AppController],
   providers: [AppService],
