@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { UserDocument } from './user.schema';
 import { InjectModel } from '@nestjs/mongoose';
@@ -8,13 +8,6 @@ export class UserService {
   constructor(
     @InjectModel('User') private readonly userCollection: Model<UserDocument>,
   ) {}
-
-  async getUserByPhone(phoneNumber: string) {
-    const user = await this.userCollection.findOne({
-      phoneNumber,
-    });
-    return user;
-  }
 
   async createUserByPhone(userObject: any, userId: string) {
     try {
@@ -52,5 +45,48 @@ export class UserService {
 
   async updateUser(userId: string, updateDto: any) {
     return this._update(userId, updateDto);
+  }
+
+  async getUserById(userId: string) {
+    const user = await this.findById(userId);
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+    return user;
+  }
+
+  async unblockUser(userId: string) {
+    const user = await this.findById(userId);
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+
+    if (!user.isBlocked) {
+      return { message: 'User is already unblocked' };
+    }
+
+    const updatedUser = await this._update(userId, {
+      isBlocked: false,
+    });
+    // send SNS event - to admin topic SNS
+    return updatedUser;
+  }
+
+  async blockUser(userId: string) {
+    const user = await this.findById(userId);
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+
+    if (user.isBlocked) {
+      return { message: 'User is already blocked' };
+    }
+
+    const updatedUser = await this._update(userId, {
+      isBlocked: true,
+    });
+
+    // send SNS event - to admin topic SNS
+    return updatedUser;
   }
 }
