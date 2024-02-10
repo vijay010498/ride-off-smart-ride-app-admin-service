@@ -41,6 +41,9 @@ export class SqsProcessorService {
 
   private async _handleUserCreationByPhone(user: any, userId: string) {
     try {
+      
+      console.log("SQS : Hit the User Created Method");
+
       await this.userService.createUserByPhone(user, userId);
     } catch (error) {
       this.logger.error('Error creating user by phone:', error);
