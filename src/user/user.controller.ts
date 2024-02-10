@@ -1,20 +1,20 @@
 import {
   Controller,
-  Logger,
   Patch,
   Get,
   Query,
   ParseIntPipe,
   Param,
+  UseGuards,
 } from '@nestjs/common';
 import { UserService } from './user.service';
+import { UserExistGuard } from '../common/guards/userExist.guard';
 
 @Controller('user')
 // TODO
 // Implement guards for Admin User
 // Implement interceptors for the Admin User
 export class UserController {
-  private readonly logger = new Logger(UserController.name);
   constructor(private readonly userService: UserService) {}
 
   @Get()
@@ -25,17 +25,19 @@ export class UserController {
     return this.userService.getUsers(page, limit);
   }
 
+  @UseGuards(UserExistGuard)
   @Get(':id')
   getUserById(@Param('id') id: string) {
     return this.userService.getUserById(id);
   }
 
+  @UseGuards(UserExistGuard)
   @Patch(':id/unblock')
   unblockUser(@Param('id') id: string) {
     return this.userService.unblockUser(id);
   }
 
-  //Implement SNS for this Implementation inside the service
+  @UseGuards(UserExistGuard)
   @Patch(':id/block')
   blockUser(@Param('id') id: string) {
     return this.userService.blockUser(id);

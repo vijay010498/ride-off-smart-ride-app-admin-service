@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { UserDocument } from './user.schema';
 import { InjectModel } from '@nestjs/mongoose';
@@ -48,45 +48,20 @@ export class UserService {
   }
 
   async getUserById(userId: string) {
-    const user = await this.findById(userId);
-    if (!user) {
-      throw new NotFoundException('User not found');
-    }
-    return user;
+    return await this.findById(userId);
   }
 
   async unblockUser(userId: string) {
-    const user = await this.findById(userId);
-    if (!user) {
-      throw new NotFoundException('User not found');
-    }
-
-    if (!user.isBlocked) {
-      return { message: 'User is already unblocked' };
-    }
-
-    const updatedUser = await this._update(userId, {
+    // send SNS event - to admin topic SNS
+    return await this._update(userId, {
       isBlocked: false,
     });
-    // send SNS event - to admin topic SNS
-    return updatedUser;
   }
 
   async blockUser(userId: string) {
-    const user = await this.findById(userId);
-    if (!user) {
-      throw new NotFoundException('User not found');
-    }
-
-    if (user.isBlocked) {
-      return { message: 'User is already blocked' };
-    }
-
-    const updatedUser = await this._update(userId, {
+    // send SNS event - to admin topic SNS
+    return this._update(userId, {
       isBlocked: true,
     });
-
-    // send SNS event - to admin topic SNS
-    return updatedUser;
   }
 }
