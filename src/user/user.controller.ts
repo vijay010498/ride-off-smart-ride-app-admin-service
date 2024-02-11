@@ -1,82 +1,47 @@
 import {
-    BadRequestException,
-    Controller,
-    Logger,
-    Patch,
-    Get,
-    Query,
-    ParseIntPipe,
-    NotFoundException,
-    Param,
-    Post,
-  } from '@nestjs/common';
-  import { UserService } from './user.service';
-  
-  @Controller('user')
-  // TO DO : 
-  // Implement (AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard) for Admin User
-  // Implement interceptors for the Admin User
-  export class UserController {
-    private readonly logger = new Logger(UserController.name);
-    constructor(private readonly userService: UserService) {}
+  Controller,
+  Patch,
+  Get,
+  Query,
+  ParseIntPipe,
+  Param,
+  UseGuards,
+} from '@nestjs/common';
+import { UserService } from './user.service';
+import { UserExistGuard } from '../common/guards/userExist.guard';
 
-    @Get()
-    async getUsers(
-      @Query('page', ParseIntPipe) page: number,
-      @Query('limit', ParseIntPipe) limit: number,
-    ) {
-      const users = await this.userService.getUsers(page, limit);
-      return users;
-    }
+@Controller('user')
+// TODO
+// Implement guards for Admin User
+// Implement interceptors for the Admin User
+export class UserController {
+  constructor(private readonly userService: UserService) {}
 
-    @Get(':id')
-    async getUserDetails(@Param('id') id: string) {
-    const user = await this.userService.findById(id);
-    if (!user) {
-      throw new NotFoundException('User not found');
-    }
-    return user;
-    }
-    
-     //Implement SNS for this Implementation inside the service
-    @Patch(':id/unblock')
-    async unblockUser(@Param('id') id: string) {
-      const user = await this.userService.findById(id);
-      if (!user) {
-        throw new NotFoundException('User not found');
-      }
-
-      if (!user.isBlocked) {
-        return { message: 'User is already unblocked' };
-      }
-
-      const updatedUser = await this.userService.updateUser(id, { isBlocked: false });
-      return updatedUser;
-    }
-
-    //Implement SNS for this Implementation inside the service
-    @Patch(':id/block')
-    async blockUser(@Param('id') id: string) {
-      const user = await this.userService.findById(id);
-      if (!user) {
-        throw new NotFoundException('User not found');
-      }
-
-      if (user.isBlocked) {
-        return { message: 'User is already blocked' };
-      }
-
-      const updatedUser = await this.userService.updateUser(id, { isBlocked: true });
-      return updatedUser;
-    }
-
-    @Get(':phoneNumber')
-    async getUserByPhoneNumber(@Param('phoneNumber') phoneNumber: string) {
-      const user = await this.userService.getUserByPhone(phoneNumber);
-      if (!user) {
-        throw new NotFoundException('User not found');
-      }
-      return user;
-    }
+  @Get()
+  getUsers(
+    @Query('page', ParseIntPipe) page: number,
+    @Query('limit', ParseIntPipe) limit: number,
+  ) {
+    return this.userService.getUsers(page, limit);
   }
-  
+
+  @UseGuards(UserExistGuard)
+  @Get(':id')
+  getUserById(@Param('id') id: string) {
+    return this.userService.getUserById(id);
+  }
+
+  @UseGuards(UserExistGuard)
+  @Patch(':id/unblock')
+  unblockUser(@Param('id') id: string) {
+    return this.userService.unblockUser(id);
+  }
+
+  @UseGuards(UserExistGuard)
+  @Patch(':id/block')
+  blockUser(@Param('id') id: string) {
+    return this.userService.blockUser(id);
+  }
+
+  // TODO implement one single endpoint for search user where we can search on any user attribute
+}

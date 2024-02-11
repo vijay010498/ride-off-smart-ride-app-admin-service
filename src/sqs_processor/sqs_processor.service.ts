@@ -17,14 +17,11 @@ export class SqsProcessorService {
             const parsedBody = JSON.parse(Body);
             const parsedMessage = JSON.parse(parsedBody.Message);
             if (parsedMessage['EVENT_TYPE']) {
-              const { EVENT_TYPE, user, userId, token, updatedUser } =
-                parsedMessage;
-              this.logger.log(EVENT_TYPE, user, userId, token, updatedUser);
+              const { EVENT_TYPE, user, userId, updatedUser } = parsedMessage;
+              this.logger.log(EVENT_TYPE, user, userId, updatedUser);
               switch (EVENT_TYPE) {
                 case Events.userCreatedByPhone:
                   return this._handleUserCreationByPhone(user, userId);
-                case Events.tokenBlackList:
-                  return this._handleTokenBlackListEvent(token);
                 case Events.userUpdated:
                   return this._handleUserUpdatedEvent(updatedUser, userId);
                 default:
@@ -33,7 +30,7 @@ export class SqsProcessorService {
               }
             }
           } catch (error) {
-            this.logger.error('Error processing SQS message:', error);
+            this.logger.error('Error Parsing message:', error);
           }
         }),
       );
@@ -44,21 +41,9 @@ export class SqsProcessorService {
 
   private async _handleUserCreationByPhone(user: any, userId: string) {
     try {
-      
-      console.log("SQS : Hit the User Created Method");
-
       await this.userService.createUserByPhone(user, userId);
     } catch (error) {
       this.logger.error('Error creating user by phone:', error);
-      throw error;
-    }
-  }
-
-  private async _handleTokenBlackListEvent(token: string) {
-    try {
-      await this.userService.addTokenInBlackList(token);
-    } catch (error) {
-      this.logger.error('Error handleTokenBlackListEvent', error);
       throw error;
     }
   }
