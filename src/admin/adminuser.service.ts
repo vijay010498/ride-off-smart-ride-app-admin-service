@@ -8,6 +8,8 @@ import * as bcrypt from 'bcrypt';
 import { UpdateAdminUserDto } from './dtos/update-adminuser.dto';
 import { PasswordDto } from './dtos/password.dto';
 import { AdminResponseDto } from './dtos/admin-response.dto';
+import { SearchAdminUserDto } from './dtos/search-adminuser.dto';
+import { PaginatedDataDto } from 'src/common/dtos/paginated-data.dto';
 
 
 export class AdminService {
@@ -108,19 +110,68 @@ export class AdminService {
         return; // Consider returning a success message instead of void, but avoid sending sensitive information
     }
 
-    async getAllUsers(page: number = 1, limit: number = 10): Promise<AdminResponseDto[]> {
+    async getAllUsers(page: number = 1, limit: number = 10): Promise<PaginatedDataDto> {
         const skip = (page - 1) * limit;
-        const users = await this.adminModel.find({}).skip(skip).limit(limit).sort({ _id: 'asc' });
-        const userDtos: AdminResponseDto[] = users.map((user) => ({
-          _id: user._id,
-          email: user.email,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          userType: user.userType,
-          isBlocked: user.isEnabled
-        }));
+
+        const [users, totalUsers] = await Promise.all([
+            this.adminModel.find({}).skip(skip).limit(limit).sort({ _id: 'asc' }), 
+            this.adminModel.countDocuments()]);
+
+        const paginatedData: PaginatedDataDto = {
+            data: users.map((user) => ({
+              _id: user._id,
+              email: user.email,
+              firstName: user.firstName,
+              lastName: user.lastName,
+              userType: user.userType,
+              isBlocked: user.isEnabled,
+            })),
+            total: totalUsers,
+            page,
+            limit,
+          };
+        
+          return paginatedData;
+    }
+
+    async searchUsers(searchDto: SearchAdminUserDto, page: number = 1, limit: number = 10): Promise<PaginatedDataDto> {
+        const skip = (page - 1) * limit;
       
-        return userDtos  
+        const searchQuery: { [key: string]: any } = {};
+      
+        if (searchDto.firstName) {
+            searchQuery.firstName = { $regex: searchDto.firstName, $options: 'i' };
+          }
+          if (searchDto.lastName) {
+            searchQuery.lastName = { $regex: searchDto.lastName, $options: 'i' };
+          }
+          if (searchDto.userType) {
+            searchQuery.userType = searchDto.userType;
+          }
+          if (searchDto.isBlocked !== undefined) {
+            searchQuery.isBlocked = searchDto.isBlocked;
+          }
+      
+        const [users, totalUsers] = await Promise.all([
+          this.adminModel.find(searchQuery, { hashedPassword: 0 }).skip(skip).limit(limit).sort({ _id: 'asc' }),
+          this.adminModel.countDocuments(searchQuery),
+        ]);
+      
+        const paginatedData: PaginatedDataDto = {
+          data: users.map((user) => ({
+            _id: user._id,
+            email: user.email,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            userType: user.userType,
+            isBlocked: user.isEnabled,
+          })),
+          total: totalUsers,
+          page,
+          limit,
+        };
+      
+        return paginatedData;
     }
     
     
