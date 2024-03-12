@@ -1,6 +1,6 @@
 import { IsBoolean, IsEmail, IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { UserType } from '../adminuser.schema';
+import { AdminUserType } from '../adminuser.schema';
 
 
 
@@ -19,7 +19,7 @@ export class CreateAdminUserDto  {
 
   @ApiProperty()
   @IsString()
-  userType: UserType;
+  userType: AdminUserType;
 
   @ApiProperty()
   @IsBoolean()

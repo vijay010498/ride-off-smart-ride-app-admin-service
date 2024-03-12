@@ -1,10 +1,10 @@
-import { UserType } from "../adminuser.schema";
+import { AdminUserType } from "../adminuser.schema";
 
 export interface AdminResponseDto {
     _id: string;
     email: string;
     firstName: string;
     lastName: string;
-    userType: UserType;
+    userType: AdminUserType;
     isBlocked: boolean;
   }

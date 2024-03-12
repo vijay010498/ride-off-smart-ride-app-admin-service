@@ -1,14 +1,13 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-export enum UserType {
+export enum AdminUserType {
     SuperAdmin = 'Super-Admin',
-    Admin = 'Admin',
     StandardAdmin = 'Standard-Admin',
   }
 
 @Schema()
-export class Admin extends Document {
+export class AdminUser extends Document {
   @Prop({ required: true, unique: true })
   email: string;
 
@@ -18,8 +17,8 @@ export class Admin extends Document {
   @Prop({ required: true })
   lastName: string;
 
-  @Prop({ required: true, enum: UserType })
-  userType: UserType;
+  @Prop({ required: true, enum: AdminUserType })
+  userType: AdminUserType;
 
   @Prop({ default: true })
   firstTimeLogin: boolean;
@@ -29,7 +28,10 @@ export class Admin extends Document {
 
   @Prop({ required: true })
   hashedPassword: string;
+
+  @Prop()
+  refreshToken: string;
 }
 
-export type AdminDocument = Admin & Document;
-export const AdminSchema = SchemaFactory.createForClass(Admin);
+export type AdminUserDocument = AdminUser & Document;
+export const AdminUserSchema = SchemaFactory.createForClass(AdminUser);

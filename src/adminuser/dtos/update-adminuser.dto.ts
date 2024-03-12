@@ -1,5 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { UserType } from "../adminuser.schema";
+import { AdminUserType } from "../adminuser.schema";
+import { IsString } from "class-validator";
 
 export class UpdateAdminUserDto {
     @ApiProperty()
@@ -9,8 +10,11 @@ export class UpdateAdminUserDto {
     lastName?: string;
 
     @ApiProperty()
-    userType?: UserType;
+    userType?: AdminUserType;
 
     @ApiProperty()
     isBlocked?: Boolean;
+
+    @IsString()
+    refreshToken: string;
 }
