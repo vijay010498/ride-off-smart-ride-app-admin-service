@@ -13,6 +13,7 @@ import { SqsProcessorModule } from './sqs_processor/sqs_processor.module';
 import { AdminuserModule } from './adminuser/adminuser.module';
 import { TokenModule } from './token/token.module';
 import { EmailModule } from './email_processor/email.module';
+import { SnsModule } from './sns/sns.module';
 
 @Module({
   imports: [
@@ -44,7 +45,8 @@ import { EmailModule } from './email_processor/email.module';
     SqsProcessorModule,
     AdminuserModule,
     EmailModule,
-    TokenModule
+    TokenModule,
+    SnsModule
   ],
   controllers: [AppController],
   providers: [AppService],
