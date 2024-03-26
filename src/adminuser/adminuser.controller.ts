@@ -35,7 +35,8 @@ export class AdminuserController {
     }
 
     @Get('logout')
-    logout(
+    @UseGuards(AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard, AdminUserTypeGuard)
+    async logout(
       @CurrentUser() user: any,
       @UserTokens() tokens: Partial<AdminUserTokensDto>,
     ) {
@@ -48,9 +49,9 @@ export class AdminuserController {
         return this.adminUserService.getAllAdminUsers(page, limit);
     }
 
-    @Patch(':id')
+    @Patch(':id/update-user')
     @UseGuards(AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard, AdminUserTypeGuard)
-    async updateAdminUser(@Param('id') userId: string, @Body() updateAdminDto: UpdateAdminUserDto) {
+    async updateAdminUser(@Param('id') userId: string, @Body() updateAdminDto: any) {
         return this.adminUserService.updateAdminUser(userId, updateAdminDto);
     }
 

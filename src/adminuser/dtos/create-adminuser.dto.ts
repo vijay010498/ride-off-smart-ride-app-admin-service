@@ -20,8 +20,4 @@ export class CreateAdminUserDto  {
   @ApiProperty()
   @IsString()
   userType: AdminUserType;
-
-  @ApiProperty()
-  @IsBoolean()
-  isBlocked: Boolean;
 }

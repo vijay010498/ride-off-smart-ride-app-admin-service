@@ -3,7 +3,6 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { AdminUser, AdminUserDocument } from './adminuser.schema';
 import { CreateAdminUserDto } from './dtos/create-adminuser.dto';
-import { BadRequestException, InternalServerErrorException } from '@nestjs/common';
 import { AdminUserType } from './adminuser.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -15,7 +14,7 @@ export class UserInitService implements OnModuleInit {
     @InjectModel(AdminUser.name) private readonly adminModel: Model<AdminUserDocument>,
     private readonly adminUserService: AdminUserService ) {}
 
-  async createSuperuserIfNotExists(): Promise<void> {
+  async createSuperuserIfNotExists(){
     const superuserExists = await this.adminModel.find({ userType: 'Super-Admin' });
 
     if (!superuserExists) {
@@ -24,7 +23,6 @@ export class UserInitService implements OnModuleInit {
           firstName: 'Super',
           lastName: 'User',
           userType: AdminUserType.SuperAdmin,
-          isBlocked: false
       };
 
       try {
@@ -35,7 +33,7 @@ export class UserInitService implements OnModuleInit {
       }
     }
   }
-  
+
   async onModuleInit() {
     await this.createSuperuserIfNotExists();
   }

@@ -7,15 +7,21 @@ import {
   import { JwtService } from '@nestjs/jwt';
   import { MyConfigService } from '../my-config/my-config.service';
   import * as argon2 from 'argon2';
-  import { AdminUserService } from '../adminuser/adminuser.service';
   import { RefreshTokenResponseDto } from './dtos/refresh-token-response.dto';
+import { AdminUserTokenBlacklist, AdminUserTokenBlacklistDocument } from '../adminuser/adminuser-token-blacklist.schema';
+import { Model,  } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
+import { AdminUser, AdminUserDocument } from 'src/adminuser/adminuser.schema';
+
+  
   @Injectable()
   export class TokenService {
     private logger = new Logger(TokenService.name);
     constructor(
       private readonly jwtService: JwtService,
       private readonly configService: MyConfigService,
-      private readonly adminUserService: AdminUserService,
+      @InjectModel(AdminUserTokenBlacklist.name)private readonly AdminUserTokenBlacklistCollection: Model<AdminUserTokenBlacklistDocument>,
+      @InjectModel(AdminUser.name) private readonly adminModel: Model<AdminUserDocument>,
     ) {}
   
     private hashData(data: string) {
@@ -51,21 +57,23 @@ import {
   
     async updateRefreshToken(userId: string, refreshToken: string) {
       const hashedRefreshToken = await this.hashData(refreshToken);
-      return this.adminUserService.updateRefreshToken(userId, hashedRefreshToken);
+      return this.adminModel
+      .findByIdAndUpdate(userId, { hashedRefreshToken }, { new: true })
+      .exec();;
     }
 
 
-    async getTokens(email: string, password: string) {
+    async getTokens(id: string, email: string) {
       const [accessToken, refreshToken] = await Promise.all([
         this.jwtService.signAsync(
-          { sub: email, password },
+          { sub: id, email },
           {
             secret: this.configService.getJwtAccessSecret(),
             expiresIn: '30d',
           },
         ),
         this.jwtService.signAsync(
-          { sub: email, password },
+          { sub: id, email },
           {
             secret: this.configService.getJwtRefreshSecret(),
             expiresIn: '150d',

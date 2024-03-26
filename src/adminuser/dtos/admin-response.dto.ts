@@ -1,7 +1,7 @@
 import { AdminUserType } from "../adminuser.schema";
 
 export interface AdminResponseDto {
-    _id: string;
+    id: string;
     email: string;
     firstName: string;
     lastName: string;

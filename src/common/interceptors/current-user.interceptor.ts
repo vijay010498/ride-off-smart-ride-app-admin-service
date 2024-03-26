@@ -11,7 +11,8 @@ import {
     constructor(private readonly adminUserService: AdminUserService) {}
     async intercept(context: ExecutionContext, next: CallHandler<any>) {
       const request = context.switchToHttp().getRequest();
-      const userId = request.user['sub'] || '';
+      const userId = request.user?.sub;
+      
   
       if (userId) {
         const user = await this.adminUserService.findById(userId);
