@@ -57,6 +57,10 @@ export class MyConfigService {
     return this.configService.get<string>('MONGO_ADMIN_DATABASE');
   }
 
+  getNotificationEmail(): string {
+    return this.configService.get<string>('NOTIFICATION_EMAIL');
+  }
+
   //ENVIRONMENT CONFIG SETTINGS
   getNodeEnv(): string {
     return this.configService.get<string>('NODE_ENV');

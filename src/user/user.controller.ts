@@ -14,7 +14,21 @@ import { IsBlockedGuard } from 'src/common/guards/isBlocked.guard';
 import { TokenBlacklistGuard } from 'src/common/guards/tokenBlacklist.guard';
 import { AdminUserTypeGuard } from 'src/common/guards/adminusertype.guard';
 import { SearchRideUserDto } from './dtos/search-ride-user.dto';
+import { ApiBadRequestResponse, ApiBearerAuth, ApiForbiddenResponse, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 
+
+
+@ApiBearerAuth()
+@ApiTags('Ride User')
+@ApiForbiddenResponse({
+  description: 'User is blocked',
+})
+@ApiUnauthorizedResponse({
+  description: 'Invalid Token',
+})
+@ApiBadRequestResponse({
+  description: 'User Does not exist',
+})
 @Controller('ride/user')
 // TODO
 @UseInterceptors(CurrentUserInterceptor)

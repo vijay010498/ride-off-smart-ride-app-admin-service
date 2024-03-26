@@ -13,7 +13,20 @@ import { AdminUserTypeGuard } from 'src/common/guards/adminusertype.guard';
 import { CurrentUser } from 'src/common/decorators/current-user.decorator';
 import { AdminUserTokensDto } from 'src/common/dtos/adminuser-tokens.dto';
 import { UserTokens } from 'src/common/decorators/user-token.decorator';
+import { ApiBadRequestResponse, ApiBearerAuth, ApiForbiddenResponse, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 
+
+@ApiBearerAuth()
+@ApiTags('Admin User')
+@ApiForbiddenResponse({
+  description: 'User is blocked',
+})
+@ApiUnauthorizedResponse({
+  description: 'Invalid Token',
+})
+@ApiBadRequestResponse({
+  description: 'User Does not exist',
+})
 @Controller('admin/user')
 @UseInterceptors(CurrentUserInterceptor)
 export class AdminuserController {

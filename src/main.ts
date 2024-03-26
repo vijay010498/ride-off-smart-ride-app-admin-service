@@ -4,6 +4,7 @@ import { ValidationPipe } from '@nestjs/common';
 import * as fs from 'fs';
 import * as dotenv from 'dotenv';
 import { Logger } from '@nestjs/common';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const env = process.env.NODE_ENV || 'development';
@@ -20,11 +21,17 @@ async function bootstrap() {
   const requiredEnvVariables = [
     'MONGODB_URI_ADMIN',
     'MONGO_ADMIN_DATABASE',
+    'JWT_ACCESS_SECRET',
+    'JWT_REFRESH_SECRET',
+    'aws_sns_access_key_id',
+    'aws_sns_secret_access_key',
     'aws_sqs_access_key_id',
     'aws_sqs_secret_access_key',
+    'ADMIN_TOPIC_SNS_ARN',
     'aws_sqs_queue_name',
     'aws_sqs_queue_url',
     'aws_region',
+    'NOTIFICATION_EMAIL'
   ];
 
   const missingVariables = requiredEnvVariables.filter((variable) => {
@@ -48,6 +55,16 @@ async function bootstrap() {
       whitelist: true, // If set to true validator will strip validated object of any properties that do not have any decorators Tip: if no other decorator is suitable for your property use @Allow decorator.
     }),
   );
+
+  const config = new DocumentBuilder()
+    .setTitle('Admin Service')
+    .setDescription('Smart Ride App Admin Service')
+    .addBearerAuth()
+    .build();
+  const document = SwaggerModule.createDocument(app, config, {
+    deepScanRoutes: true,
+  });
+  SwaggerModule.setup(`${globalPrefix}/swagger`, app, document);
 
   await app.listen(3000);
 }
