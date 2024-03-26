@@ -3,45 +3,59 @@ import {
   Patch,
   Get,
   Query,
-  ParseIntPipe,
   Param,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
 import { UserService } from './user.service';
-import { UserExistGuard } from '../common/guards/userExist.guard';
+import { CurrentUserInterceptor } from 'src/common/interceptors/current-user.interceptor';
+import { AccessTokenGuard } from 'src/common/guards/accessToken.guard';
+import { IsBlockedGuard } from 'src/common/guards/isBlocked.guard';
+import { TokenBlacklistGuard } from 'src/common/guards/tokenBlacklist.guard';
+import { AdminUserTypeGuard } from 'src/common/guards/adminusertype.guard';
+import { SearchRideUserDto } from './dtos/search-ride-user.dto';
+import { ApiBadRequestResponse, ApiBearerAuth, ApiForbiddenResponse, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 
-@Controller('user')
+
+
+@ApiBearerAuth()
+@ApiTags('Ride User')
+@ApiForbiddenResponse({
+  description: 'User is blocked',
+})
+@ApiUnauthorizedResponse({
+  description: 'Invalid Token',
+})
+@ApiBadRequestResponse({
+  description: 'User Does not exist',
+})
+@Controller('ride/user')
 // TODO
-// Implement guards for Admin User
-// Implement interceptors for the Admin User
+@UseInterceptors(CurrentUserInterceptor)
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get()
-  getUsers(
-    @Query('page', ParseIntPipe) page: number,
-    @Query('limit', ParseIntPipe) limit: number,
-  ) {
-    return this.userService.getUsers(page, limit);
+  @UseGuards(AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard, AdminUserTypeGuard)
+  getUsers(@Query('page') page: number, @Query('limit') limit: number) {
+    return this.userService.getRideUsers(page, limit);
   }
 
-  @UseGuards(UserExistGuard)
-  @Get(':id')
-  getUserById(@Param('id') id: string) {
-    return this.userService.getUserById(id);
-  }
-
-  @UseGuards(UserExistGuard)
   @Patch(':id/unblock')
+  @UseGuards(AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard, AdminUserTypeGuard)
   unblockUser(@Param('id') id: string) {
-    return this.userService.unblockUser(id);
+    return this.userService.unblockRideUser(id);
   }
 
-  @UseGuards(UserExistGuard)
   @Patch(':id/block')
+  @UseGuards(AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard, AdminUserTypeGuard)
   blockUser(@Param('id') id: string) {
-    return this.userService.blockUser(id);
+    return this.userService.blockRideUser(id);
   }
 
-  // TODO implement one single endpoint for search user where we can search on any user attribute
+  @Get('search')
+    @UseGuards(AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard, AdminUserTypeGuard)
+    async searchRideUsers(@Query() searchDto: SearchRideUserDto, @Query('page') page: number, @Query('limit') limit: number) {
+        return this.userService.searchRideUsers(searchDto, page, limit);
+    }
 }

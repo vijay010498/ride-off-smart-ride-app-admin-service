@@ -18,7 +18,7 @@ export class SendmailService {
     });
   }
 
-  async sendEmail(toAddress: string, message: string, subject: string)
+  sendEmail(toAddress: string, message: string, subject: string)
   {
     new SendEmailCommand({
       Destination: {

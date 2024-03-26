@@ -10,6 +10,10 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
 import { SqsModule } from './sqs/sqs.module';
 import { SqsProcessorModule } from './sqs_processor/sqs_processor.module';
+import { AdminuserModule } from './adminuser/adminuser.module';
+import { TokenModule } from './token/token.module';
+import { EmailModule } from './email_processor/email.module';
+import { SnsModule } from './sns/sns.module';
 
 @Module({
   imports: [
@@ -39,6 +43,10 @@ import { SqsProcessorModule } from './sqs_processor/sqs_processor.module';
     UserModule,
     SqsModule,
     SqsProcessorModule,
+    AdminuserModule,
+    EmailModule,
+    TokenModule,
+    SnsModule
   ],
   controllers: [AppController],
   providers: [AppService],
