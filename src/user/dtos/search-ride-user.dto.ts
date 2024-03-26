@@ -20,7 +20,7 @@ export class SearchRideUserDto {
     email?: string;
 
     @ApiProperty({ required: false })
-    @IsPhoneNumber()
+    @IsString()
     @IsOptional()
     phoneNumber?: string;
 

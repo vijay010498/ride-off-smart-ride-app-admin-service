@@ -1,15 +1,18 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { UserDocument } from './user.schema';
 import { InjectModel } from '@nestjs/mongoose';
-import { RideUserResponseDto } from './dtos/ride-user-response.dto';
 import { PaginatedDataDto } from 'src/common/dtos/paginated-data.dto';
 import { SearchRideUserDto } from './dtos/search-ride-user.dto';
+import { SnsService } from 'src/sns/sns.service';
 
 @Injectable()
 export class UserService {
+
+  private readonly logger = new Logger(UserService.name);
   constructor(
     @InjectModel('User') private readonly userCollection: Model<UserDocument>,
+    private readonly snsService: SnsService,
   ) {}
 
 
@@ -86,23 +89,54 @@ export class UserService {
   }
 
   async unblockRideUser(userId: string) {
-    // send SNS event - to admin topic SNS
-    return await this._update(userId, {
+    const user = await this._update(userId, {
       isBlocked: false,
     });
+
+    this.snsService.userUpdatedEvent(user);
+
+    const response = {
+      message : "success"
+    }
+
+    return response;
   }
 
   async blockRideUser(userId: string) {
-    // send SNS event - to admin topic SNS
-    return this._update(userId, {
+    const user = await this._update(userId, {
       isBlocked: true,
     });
-  }
 
+    this.snsService.userUpdatedEvent(user);
+
+    const response = {
+      message : "success"
+    }
+    
+    return response; 
+  }
 
   private async _update(id: string, updateUserDto: any) {
     return this.userCollection
       .findByIdAndUpdate(id, updateUserDto, { new: true })
       .exec();
+  }
+
+  async createUserByPhone(userObject: any, userId: string) {
+    try {
+      // check if user already exists
+      const existingUser = await this.findById(userId);
+      if (existingUser) throw new Error('User With Given Id already exists');
+      const user = new this.userCollection({ ...userObject });
+      await user.save();
+
+      return user;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async findById(id: string) {
+    return this.userCollection.findById(id);
   }
 }
