@@ -18,6 +18,7 @@ import { DriverModule } from './driver/driver.module';
 import { LocationModule } from './location/location.module';
 import { RideModule } from './ride/ride.module';
 import { RiderModule } from './rider/rider.module';
+import { HealthModule } from './health/health.module';
 
 @Module({
   imports: [
@@ -55,6 +56,8 @@ import { RiderModule } from './rider/rider.module';
     RideModule,
     LocationModule,
     SnsModule
+    SnsModule,
+    HealthModule
   ],
   controllers: [AppController],
   providers: [AppService],
