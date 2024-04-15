@@ -114,7 +114,34 @@ export class AdminUserService {
   }
 
   async findById(id: string) {
-    return this.adminModel.findById(id);
+    const existingAdmin = await this.adminModel.findById(id);
+
+    if (!existingAdmin) {
+      throw new BadRequestException(`Admin with ID '${id}' not found`);
+    }
+
+    return existingAdmin;
+
+  }
+
+  async GetById(id: string) {
+    const existingAdmin = await this.adminModel.findById(id);
+
+    if (!existingAdmin) {
+      throw new BadRequestException(`Admin with ID '${id}' not found`);
+    }
+
+    const adminResponseDto : AdminResponseDto = {
+      id: existingAdmin._id,
+      email: existingAdmin.email,
+      firstName: existingAdmin.firstName,
+      lastName: existingAdmin.lastName,
+      userType: existingAdmin.userType,
+      isBlocked: !existingAdmin.isEnabled
+    };
+    
+    return  adminResponseDto;
+
   }
 
   async updateAdminUser(userId: string, updateAdminDto: UpdateAdminUserDto){
@@ -191,6 +218,8 @@ export class AdminUserService {
         lastName: user.lastName,
         userType: user.userType,
         isBlocked: !user.isEnabled,
+        firstTimeLogin : user.firstTimeLogin,
+        isEnabled : user.isEnabled
       })),
       total: totalUsers,
       page,

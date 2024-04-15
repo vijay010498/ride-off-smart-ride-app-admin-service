@@ -62,6 +62,12 @@ export class AdminuserController {
         return this.adminUserService.getAllAdminUsers(page, limit);
     }
 
+    @Get()
+    @UseGuards(AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard, AdminUserTypeGuard)
+    async getByUserId(@Query('id') id: string) {
+        return this.adminUserService.GetById(id);
+    }
+
     @Patch(':id/update-user')
     @UseGuards(AccessTokenGuard, IsBlockedGuard, TokenBlacklistGuard, AdminUserTypeGuard)
     async updateAdminUser(@Param('id') userId: string, @Body() updateAdminDto: any) {
