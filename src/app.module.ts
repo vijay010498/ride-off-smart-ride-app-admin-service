@@ -14,6 +14,7 @@ import { AdminuserModule } from './adminuser/adminuser.module';
 import { TokenModule } from './token/token.module';
 import { EmailModule } from './email_processor/email.module';
 import { SnsModule } from './sns/sns.module';
+import { HealthModule } from './health/health.module';
 
 @Module({
   imports: [
@@ -46,7 +47,8 @@ import { SnsModule } from './sns/sns.module';
     AdminuserModule,
     EmailModule,
     TokenModule,
-    SnsModule
+    SnsModule,
+    HealthModule
   ],
   controllers: [AppController],
   providers: [AppService],
