@@ -46,7 +46,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     snapshot: true,
     abortOnError: false,
-    cors: true,
   });
   const globalPrefix = 'api/admin';
   app.setGlobalPrefix(globalPrefix);
