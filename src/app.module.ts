@@ -14,6 +14,10 @@ import { AdminuserModule } from './adminuser/adminuser.module';
 import { TokenModule } from './token/token.module';
 import { EmailModule } from './email_processor/email.module';
 import { SnsModule } from './sns/sns.module';
+import { DriverModule } from './driver/driver.module';
+import { LocationModule } from './location/location.module';
+import { RideModule } from './ride/ride.module';
+import { RiderModule } from './rider/rider.module';
 import { HealthModule } from './health/health.module';
 
 @Module({
@@ -47,6 +51,11 @@ import { HealthModule } from './health/health.module';
     AdminuserModule,
     EmailModule,
     TokenModule,
+    DriverModule,
+    RiderModule,
+    RideModule,
+    LocationModule,
+    SnsModule
     SnsModule,
     HealthModule
   ],

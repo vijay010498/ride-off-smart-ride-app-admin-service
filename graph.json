@@ -42,6 +42,38 @@
         "token": "ApplicationConfig"
       }
     },
+    "52633727": {
+      "id": "52633727",
+      "label": "ApplicationConfig",
+      "parent": "-1854488870",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "52633728": {
+      "id": "52633728",
+      "label": "ApplicationConfig",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
     "92420881": {
       "id": "92420881",
       "label": "DatabaseConnection",
@@ -55,7 +87,7 @@
         "transient": false,
         "exported": true,
         "token": "DatabaseConnection",
-        "initTime": 794.1669999957085
+        "initTime": 10780.025200001895
       }
     },
     "95355232": {
@@ -72,7 +104,7 @@
         "transient": false,
         "exported": false,
         "token": "JwtModule",
-        "initTime": 26.803900003433228
+        "initTime": 14.417899996042252
       }
     },
     "124891751": {
@@ -97,7 +129,8 @@
         "static": true,
         "transient": false,
         "exported": false,
-        "token": "UserInitService"
+        "token": "UserInitService",
+        "initTime": 10798.444600000978
       }
     },
     "139746697": {
@@ -113,7 +146,7 @@
         "transient": false,
         "exported": true,
         "token": "TokenService",
-        "initTime": 783.2014999985695
+        "initTime": 10791.633299998939
       }
     },
     "203550704": {
@@ -129,7 +162,7 @@
         "transient": false,
         "exported": true,
         "token": "ExternalContextCreator",
-        "initTime": 60.07209998369217
+        "initTime": 23.69029999524355
       }
     },
     "211572259": {
@@ -156,7 +189,7 @@
         "transient": false,
         "exported": false,
         "token": "InternalCoreModule",
-        "initTime": 61.61809998750687
+        "initTime": 24.495700001716614
       }
     },
     "233936880": {
@@ -172,7 +205,23 @@
         "transient": false,
         "exported": false,
         "token": "AppController",
-        "initTime": 5.203199982643127
+        "initTime": 3.3841999992728233
+      }
+    },
+    "252376264": {
+      "id": "252376264",
+      "label": "ModuleRef",
+      "parent": "-29283122",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "LocationModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
       }
     },
     "264711474": {
@@ -189,7 +238,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 53.06259998679161
+        "initTime": 19.494699999690056
       }
     },
     "303302557": {
@@ -222,7 +271,7 @@
         "transient": false,
         "exported": false,
         "token": "TokenModule",
-        "initTime": 30.005899995565414
+        "initTime": 15.317299999296665
       }
     },
     "373235992": {
@@ -238,7 +287,7 @@
         "transient": false,
         "exported": false,
         "token": "SandboxedCodeExecutor",
-        "initTime": 123.29629999399185
+        "initTime": 58.90500000119209
       }
     },
     "373673467": {
@@ -265,6 +314,22 @@
         "exported": false,
         "token": "AccessTokenGuard",
         "subtype": "guard"
+      }
+    },
+    "378321585": {
+      "id": "378321585",
+      "label": "DriverService",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "DriverService",
+        "initTime": 10787.772799998522
       }
     },
     "397039684": {
@@ -296,7 +361,7 @@
         "transient": false,
         "exported": true,
         "token": "DiscoveryService",
-        "initTime": 120.97899997234344
+        "initTime": 57.68080000579357
       }
     },
     "406551137": {
@@ -404,6 +469,38 @@
         "internal": true
       }
     },
+    "565356470": {
+      "id": "565356470",
+      "label": "ApplicationConfig",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "573369958": {
+      "id": "573369958",
+      "label": "ApplicationConfig",
+      "parent": "1370223169",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "DriverModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
     "671882984": {
       "id": "671882984",
       "label": "Reflector",
@@ -417,7 +514,7 @@
         "transient": false,
         "exported": true,
         "token": "Reflector",
-        "initTime": 61.13249999284744
+        "initTime": 24.294199995696545
       }
     },
     "675310842": {
@@ -446,6 +543,54 @@
         "internal": false
       }
     },
+    "809591672": {
+      "id": "809591672",
+      "label": "RideController",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "controller",
+        "internal": false,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "RideController",
+        "enhancers": [
+          {
+            "id": "-1495750028",
+            "subtype": "guard"
+          },
+          {
+            "id": "1764070503",
+            "subtype": "guard"
+          },
+          {
+            "id": "1636095525",
+            "subtype": "guard"
+          },
+          {
+            "id": "-1308595419",
+            "subtype": "interceptor"
+          },
+          {
+            "name": "SerializeInterceptor",
+            "methodKey": "getUserDriverRides",
+            "subtype": "interceptor"
+          },
+          {
+            "name": "SerializeInterceptor",
+            "methodKey": "getDriverRideReportsByDateRange",
+            "subtype": "interceptor"
+          },
+          {
+            "name": "SerializeInterceptor",
+            "methodKey": "getDriverRideReportsByStatus",
+            "subtype": "interceptor"
+          }
+        ]
+      }
+    },
     "826085184": {
       "id": "826085184",
       "label": "CacheModule",
@@ -460,7 +605,7 @@
         "transient": false,
         "exported": false,
         "token": "CacheModule",
-        "initTime": 57.127499997615814
+        "initTime": 21.64800000190735
       }
     },
     "902560543": {
@@ -508,7 +653,7 @@
         "transient": false,
         "exported": true,
         "token": "Symbol(CONFIG_SERVICE)",
-        "initTime": 125.15009999275208
+        "initTime": 60.12089999765158
       }
     },
     "931145565": {
@@ -567,7 +712,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 49.67080000042915
+        "initTime": 18.009700000286102
       }
     },
     "984659045": {
@@ -584,7 +729,41 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 35.5774000287056
+        "initTime": 15.84679999947548
+      }
+    },
+    "984659046": {
+      "id": "984659046",
+      "label": "MongooseModule",
+      "parent": "-1854488870",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseModule",
+        "initTime": 12.086600005626678
+      }
+    },
+    "984659047": {
+      "id": "984659047",
+      "label": "MongooseModule",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "MongooseModule",
+        "initTime": 11.135799996554852
       }
     },
     "1021862644": {
@@ -601,7 +780,24 @@
         "transient": false,
         "exported": false,
         "token": "MyConfigModule",
-        "initTime": 54.63170000910759
+        "initTime": 20.138800002634525
+      }
+    },
+    "1031847496": {
+      "id": "1031847496",
+      "label": "RideModule",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "RideModule",
+        "initTime": 11.560100004076958
       }
     },
     "1063746662": {
@@ -617,7 +813,7 @@
         "transient": false,
         "exported": true,
         "token": "CONFIGURATION_TOKEN",
-        "initTime": 57.81260001659393
+        "initTime": 22.136399999260902
       }
     },
     "1070370213": {
@@ -633,7 +829,7 @@
         "transient": false,
         "exported": true,
         "token": "JwtService",
-        "initTime": 87.76780000329018
+        "initTime": 49.35400000214577
       }
     },
     "1098712893": {
@@ -649,7 +845,7 @@
         "transient": false,
         "exported": false,
         "token": "AccessTokenStrategy",
-        "initTime": 27.663599997758865
+        "initTime": 14.570100001990795
       }
     },
     "1139971038": {
@@ -684,6 +880,39 @@
         "subtype": "guard"
       }
     },
+    "1221471905": {
+      "id": "1221471905",
+      "label": "DriverService",
+      "parent": "1370223169",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "DriverModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "DriverService",
+        "initTime": 10789.247900001705
+      }
+    },
+    "1278318466": {
+      "id": "1278318466",
+      "label": "LocationModule",
+      "parent": "-29283122",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "LocationModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "LocationModule",
+        "initTime": 11.905100002884865
+      }
+    },
     "1295205016": {
       "id": "1295205016",
       "label": "TokenModule",
@@ -692,6 +921,22 @@
         "global": false,
         "dynamic": false,
         "internal": false
+      }
+    },
+    "1348169915": {
+      "id": "1348169915",
+      "label": "ModuleRef",
+      "parent": "1370223169",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "DriverModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
       }
     },
     "1357421246": {
@@ -707,7 +952,17 @@
         "transient": false,
         "exported": true,
         "token": "CACHE_MANAGER",
-        "initTime": 119.50560000538826
+        "initTime": 57.064400002360344
+      }
+    },
+    "1370223169": {
+      "id": "1370223169",
+      "label": "DriverModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
       }
     },
     "1434456218": {
@@ -724,7 +979,7 @@
         "transient": false,
         "exported": true,
         "token": "Reflector",
-        "initTime": 127.69059997797012
+        "initTime": 61.76419999450445
       }
     },
     "1539183592": {
@@ -740,7 +995,23 @@
         "transient": false,
         "exported": true,
         "token": "AdminUserModel",
-        "initTime": 793.2211999893188
+        "initTime": 10788.947900004685
+      }
+    },
+    "1636095525": {
+      "id": "1636095525",
+      "label": "TokenBlacklistGuard",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "injectable",
+        "internal": false,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "TokenBlacklistGuard",
+        "subtype": "guard"
       }
     },
     "1688619051": {
@@ -756,7 +1027,7 @@
         "transient": false,
         "exported": false,
         "token": "DevtoolsHttpServerHost",
-        "initTime": 173.83909997344017
+        "initTime": 89.56980000436306
       }
     },
     "1690574933": {
@@ -865,6 +1136,22 @@
         "token": "ModuleRef"
       }
     },
+    "1764070503": {
+      "id": "1764070503",
+      "label": "IsBlockedGuard",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "injectable",
+        "internal": false,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "IsBlockedGuard",
+        "subtype": "guard"
+      }
+    },
     "1769319388": {
       "id": "1769319388",
       "label": "ConfigModule",
@@ -879,7 +1166,7 @@
         "transient": false,
         "exported": false,
         "token": "ConfigModule",
-        "initTime": 59.45309999585152
+        "initTime": 23.116399995982647
       }
     },
     "1787828844": {
@@ -896,7 +1183,7 @@
         "transient": false,
         "exported": false,
         "token": "ConfigHostModule",
-        "initTime": 58.042500019073486
+        "initTime": 22.306100003421307
       }
     },
     "1840551787": {
@@ -912,7 +1199,7 @@
         "transient": false,
         "exported": true,
         "token": "AdminUserService",
-        "initTime": 798.1399999856949
+        "initTime": 10798.197800002992
       }
     },
     "1842504512": {
@@ -929,7 +1216,7 @@
         "transient": false,
         "exported": false,
         "token": "AdminuserModule",
-        "initTime": 41.43959999084473
+        "initTime": 17.86490000039339
       }
     },
     "1864609274": {
@@ -988,7 +1275,23 @@
         "transient": false,
         "exported": true,
         "token": "REQUEST",
-        "initTime": 58.108399987220764
+        "initTime": 21.97909999638796
+      }
+    },
+    "1930812539": {
+      "id": "1930812539",
+      "label": "CONFIGURABLE_MODULE_OPTIONS[89f6f9b2f7375d4d66910]",
+      "parent": "-1033621697",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "DevtoolsModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "CONFIGURABLE_MODULE_OPTIONS[89f6f9b2f7375d4d66910]",
+        "initTime": 77.82199999690056
       }
     },
     "1986699406": {
@@ -1085,7 +1388,7 @@
         "transient": true,
         "exported": true,
         "token": "INQUIRER",
-        "initTime": 58.018899977207184
+        "initTime": 21.92970000207424
       }
     },
     "-26938366": {
@@ -1101,7 +1404,7 @@
         "transient": false,
         "exported": true,
         "token": "ModulesContainer",
-        "initTime": 60.009800016880035
+        "initTime": 23.550499998033047
       }
     },
     "-326832201": {
@@ -1117,7 +1420,7 @@
         "transient": false,
         "exported": true,
         "token": "HttpAdapterHost",
-        "initTime": 59.94539999961853
+        "initTime": 23.471000000834465
       }
     },
     "-702581189": {
@@ -1133,7 +1436,7 @@
         "transient": false,
         "exported": true,
         "token": "LazyModuleLoader",
-        "initTime": 59.891999989748
+        "initTime": 23.424899995326996
       }
     },
     "-1904419534": {
@@ -1149,7 +1452,7 @@
         "transient": false,
         "exported": true,
         "token": "SerializedGraph",
-        "initTime": 59.708199977874756
+        "initTime": 23.380300000309944
       }
     },
     "-19112576": {
@@ -1176,7 +1479,7 @@
         "transient": false,
         "exported": false,
         "token": "AppModule",
-        "initTime": 59.681600004434586
+        "initTime": 23.363600000739098
       }
     },
     "-71302842": {
@@ -1224,7 +1527,7 @@
         "transient": false,
         "exported": false,
         "token": "AppService",
-        "initTime": 59.575700014829636
+        "initTime": 23.20040000230074
       }
     },
     "-503631789": {
@@ -1240,7 +1543,7 @@
         "transient": false,
         "exported": true,
         "token": "ConfigService",
-        "initTime": 130.6972999870777
+        "initTime": 64.54389999806881
       }
     },
     "-949539487": {
@@ -1267,7 +1570,7 @@
         "transient": false,
         "exported": true,
         "token": "Cache",
-        "initTime": 125.56960001587868
+        "initTime": 60.957999996840954
       }
     },
     "-1871582906": {
@@ -1310,7 +1613,7 @@
         "transient": false,
         "exported": false,
         "token": "DevtoolsModule",
-        "initTime": 56.572899997234344
+        "initTime": 21.261699996888638
       }
     },
     "-751962311": {
@@ -1327,22 +1630,6 @@
         "transient": false,
         "exported": false,
         "token": "ModuleRef"
-      }
-    },
-    "-1109693554": {
-      "id": "-1109693554",
-      "label": "CONFIGURABLE_MODULE_OPTIONS[0e5aa874802abd39771b2]",
-      "parent": "-1033621697",
-      "metadata": {
-        "type": "provider",
-        "internal": false,
-        "sourceModuleName": "DevtoolsModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": false,
-        "token": "CONFIGURABLE_MODULE_OPTIONS[0e5aa874802abd39771b2]",
-        "initTime": 146.17560002207756
       }
     },
     "-1146865332": {
@@ -1374,7 +1661,7 @@
         "transient": false,
         "exported": true,
         "token": "MyConfigService",
-        "initTime": 135.75069999694824
+        "initTime": 68.6266999989748
       }
     },
     "-643397745": {
@@ -1401,7 +1688,7 @@
         "transient": false,
         "exported": false,
         "token": "DiscoveryModule",
-        "initTime": 54.055500000715256
+        "initTime": 19.886100001633167
       }
     },
     "-501891371": {
@@ -1449,7 +1736,7 @@
         "transient": false,
         "exported": true,
         "token": "MetadataScanner",
-        "initTime": 55.42500001192093
+        "initTime": 20.551399998366833
       }
     },
     "-572011637": {
@@ -1492,7 +1779,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseCoreModule",
-        "initTime": 113.52340000867844
+        "initTime": 54.54410000145435
       }
     },
     "-1033003235": {
@@ -1508,7 +1795,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModuleOptions",
-        "initTime": 142.29440000653267
+        "initTime": 75.82750000059605
       }
     },
     "-1537098012": {
@@ -1535,7 +1822,7 @@
         "transient": false,
         "exported": false,
         "token": "UserModule",
-        "initTime": 50.90279999375343
+        "initTime": 18.54550000280142
       }
     },
     "-523403191": {
@@ -1567,7 +1854,7 @@
         "transient": false,
         "exported": true,
         "token": "UserService",
-        "initTime": 804.8707999885082
+        "initTime": 10794.995999999344
       }
     },
     "-1762913784": {
@@ -1726,154 +2013,7 @@
         "transient": false,
         "exported": true,
         "token": "UserModel",
-        "initTime": 803.2838000059128
-      }
-    },
-    "-1847828352": {
-      "id": "-1847828352",
-      "label": "SnsModule",
-      "parent": "983335831",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "SnsModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "SnsModule",
-        "initTime": 48.45200002193451
-      }
-    },
-    "-1062174318": {
-      "id": "-1062174318",
-      "label": "ApplicationConfig",
-      "parent": "983335831",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "SnsModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ApplicationConfig"
-      }
-    },
-    "-1684650937": {
-      "id": "-1684650937",
-      "label": "SnsService",
-      "parent": "983335831",
-      "metadata": {
-        "type": "provider",
-        "internal": false,
-        "sourceModuleName": "SnsModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": true,
-        "token": "SnsService",
-        "initTime": 138.7791000008583
-      }
-    },
-    "-1149402848": {
-      "id": "-1149402848",
-      "label": "SqsModule",
-      "parent": "1916799540",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "SqsModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "SqsModule",
-        "initTime": 45.51290002465248
-      }
-    },
-    "-128710609": {
-      "id": "-128710609",
-      "label": "ApplicationConfig",
-      "parent": "1916799540",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "SqsModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ApplicationConfig"
-      }
-    },
-    "-793534958": {
-      "id": "-793534958",
-      "label": "SqsProcessorModule",
-      "parent": "46139094",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "SqsProcessorModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "SqsProcessorModule",
-        "initTime": 42.740199983119965
-      }
-    },
-    "-1995357744": {
-      "id": "-1995357744",
-      "label": "ModuleRef",
-      "parent": "46139094",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "SqsProcessorModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ModuleRef"
-      }
-    },
-    "-1160080581": {
-      "id": "-1160080581",
-      "label": "ApplicationConfig",
-      "parent": "46139094",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "SqsProcessorModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ApplicationConfig"
-      }
-    },
-    "-8925503": {
-      "id": "-8925503",
-      "label": "SqsProcessorService",
-      "parent": "46139094",
-      "metadata": {
-        "type": "provider",
-        "internal": false,
-        "sourceModuleName": "SqsProcessorModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": true,
-        "token": "SqsProcessorService",
-        "initTime": 799.4918999969959
+        "initTime": 10789.701099999249
       }
     },
     "-743695879": {
@@ -2166,7 +2306,7 @@
         "transient": false,
         "exported": true,
         "token": "AdminUserTokenBlacklistModel",
-        "initTime": 791.6471000015736
+        "initTime": 10788.59809999913
       }
     },
     "-2101966080": {
@@ -2183,7 +2323,7 @@
         "transient": false,
         "exported": false,
         "token": "EmailModule",
-        "initTime": 31.314699977636337
+        "initTime": 15.643899999558926
       }
     },
     "-170017038": {
@@ -2199,7 +2339,7 @@
         "transient": false,
         "exported": true,
         "token": "SendmailService",
-        "initTime": 114.07129999995232
+        "initTime": 65.61439999938011
       }
     },
     "-1615000354": {
@@ -2247,7 +2387,7 @@
         "transient": false,
         "exported": false,
         "token": "RefreshTokenStrategy",
-        "initTime": 27.062099993228912
+        "initTime": 14.499000005424023
       }
     },
     "-321506818": {
@@ -2336,6 +2476,386 @@
         "exported": false,
         "token": "JWT_MODULE_OPTIONS"
       }
+    },
+    "-1847828352": {
+      "id": "-1847828352",
+      "label": "SnsModule",
+      "parent": "983335831",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "SnsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "SnsModule",
+        "initTime": 14.161299996078014
+      }
+    },
+    "-1062174318": {
+      "id": "-1062174318",
+      "label": "ApplicationConfig",
+      "parent": "983335831",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "SnsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-1684650937": {
+      "id": "-1684650937",
+      "label": "SnsService",
+      "parent": "983335831",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "SnsModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "SnsService",
+        "initTime": 71.30070000141859
+      }
+    },
+    "-1149402848": {
+      "id": "-1149402848",
+      "label": "SqsModule",
+      "parent": "1916799540",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "SqsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "SqsModule",
+        "initTime": 13.860500000417233
+      }
+    },
+    "-128710609": {
+      "id": "-128710609",
+      "label": "ApplicationConfig",
+      "parent": "1916799540",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "SqsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-793534958": {
+      "id": "-793534958",
+      "label": "SqsProcessorModule",
+      "parent": "46139094",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "SqsProcessorModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "SqsProcessorModule",
+        "initTime": 13.477200001478195
+      }
+    },
+    "-1995357744": {
+      "id": "-1995357744",
+      "label": "ModuleRef",
+      "parent": "46139094",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "SqsProcessorModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1160080581": {
+      "id": "-1160080581",
+      "label": "ApplicationConfig",
+      "parent": "46139094",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "SqsProcessorModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-8925503": {
+      "id": "-8925503",
+      "label": "SqsProcessorService",
+      "parent": "46139094",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "SqsProcessorModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "SqsProcessorService",
+        "initTime": 10793.659199997783
+      }
+    },
+    "-1872698456": {
+      "id": "-1872698456",
+      "label": "DriverModule",
+      "parent": "1370223169",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "DriverModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "DriverModule",
+        "initTime": 13.024599999189377
+      }
+    },
+    "-1854488870": {
+      "id": "-1854488870",
+      "label": "MongooseModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-1762758572": {
+      "id": "-1762758572",
+      "label": "ModuleRef",
+      "parent": "-1854488870",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1948743582": {
+      "id": "-1948743582",
+      "label": "DriverRideModel",
+      "parent": "-1854488870",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "DriverRideModel",
+        "initTime": 10783.662399999797
+      }
+    },
+    "-118175903": {
+      "id": "-118175903",
+      "label": "UserVehicleModel",
+      "parent": "-1854488870",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "UserVehicleModel",
+        "initTime": 10783.96480000019
+      }
+    },
+    "-29283122": {
+      "id": "-29283122",
+      "label": "LocationModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-1301040205": {
+      "id": "-1301040205",
+      "label": "ApplicationConfig",
+      "parent": "-29283122",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "LocationModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
+      }
+    },
+    "-480609343": {
+      "id": "-480609343",
+      "label": "LocationService",
+      "parent": "-29283122",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "LocationModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "LocationService",
+        "initTime": 68.97960000485182
+      }
+    },
+    "-448338351": {
+      "id": "-448338351",
+      "label": "RideModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": false,
+        "internal": false
+      }
+    },
+    "-2066236597": {
+      "id": "-2066236597",
+      "label": "ModuleRef",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1495750028": {
+      "id": "-1495750028",
+      "label": "AccessTokenGuard",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "injectable",
+        "internal": false,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "AccessTokenGuard",
+        "subtype": "guard"
+      }
+    },
+    "-1308595419": {
+      "id": "-1308595419",
+      "label": "CurrentUserInterceptor",
+      "parent": "-448338351",
+      "metadata": {
+        "type": "injectable",
+        "internal": false,
+        "sourceModuleName": "RideModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": false,
+        "token": "CurrentUserInterceptor",
+        "subtype": "interceptor"
+      }
+    },
+    "-1854488869": {
+      "id": "-1854488869",
+      "label": "MongooseModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "-1762758571": {
+      "id": "-1762758571",
+      "label": "ModuleRef",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
+      }
+    },
+    "-1897890093": {
+      "id": "-1897890093",
+      "label": "UserVehicleModel",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "UserVehicleModel",
+        "initTime": 10782.036499999464
+      }
+    },
+    "-136838252": {
+      "id": "-136838252",
+      "label": "DriverRideModel",
+      "parent": "-1854488869",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "MongooseModule",
+        "durable": false,
+        "static": true,
+        "transient": false,
+        "exported": true,
+        "token": "DriverRideModel",
+        "initTime": 10781.634199999273
+      }
     }
   },
   "edges": {
@@ -2394,6 +2914,21 @@
       },
       "id": "43534933"
     },
+    "80283581": {
+      "source": "809591672",
+      "target": "-1495750028",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RideModule",
+        "sourceClassName": "RideController",
+        "targetClassName": "AccessTokenGuard",
+        "sourceClassToken": "RideController",
+        "targetClassToken": "AccessTokenGuard",
+        "targetModuleName": "RideModule",
+        "injectionType": "decorator"
+      },
+      "id": "80283581"
+    },
     "99196355": {
       "source": "-8925503",
       "target": "-2045439487",
@@ -2410,6 +2945,22 @@
       },
       "id": "99196355"
     },
+    "100665695": {
+      "source": "-1762913784",
+      "target": "1840551787",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "UserModule",
+        "sourceClassName": "AdminUserTypeGuard",
+        "targetClassName": "AdminUserService",
+        "sourceClassToken": "AdminUserTypeGuard",
+        "targetClassToken": "AdminUserService",
+        "targetModuleName": "AdminuserModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "100665695"
+    },
     "104447669": {
       "source": "-1537098012",
       "target": "-949539487",
@@ -2419,6 +2970,42 @@
         "targetModuleName": "CacheModule"
       },
       "id": "104447669"
+    },
+    "119732891": {
+      "source": "1221471905",
+      "target": "-480609343",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "DriverModule",
+        "sourceClassName": "DriverService",
+        "targetClassName": "LocationService",
+        "sourceClassToken": "DriverService",
+        "targetClassToken": "LocationService",
+        "targetModuleName": "LocationModule",
+        "keyOrIndex": 2,
+        "injectionType": "constructor"
+      },
+      "id": "119732891"
+    },
+    "142525737": {
+      "source": "1370223169",
+      "target": "-29283122",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "LocationModule"
+      },
+      "id": "142525737"
+    },
+    "143597354": {
+      "source": "-448338351",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "143597354"
     },
     "156450425": {
       "source": "46139094",
@@ -2483,6 +3070,26 @@
       },
       "id": "197145204"
     },
+    "220992999": {
+      "source": "1370223169",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "220992999"
+    },
+    "245841590": {
+      "source": "-29283122",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "LocationModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "245841590"
+    },
     "270133855": {
       "source": "124891751",
       "target": "1712628187",
@@ -2539,6 +3146,36 @@
       },
       "id": "353572985"
     },
+    "357392857": {
+      "source": "1370223169",
+      "target": "-1854488870",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "MongooseModule"
+      },
+      "id": "357392857"
+    },
+    "420470498": {
+      "source": "-29283122",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "LocationModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "420470498"
+    },
+    "445223456": {
+      "source": "-29283122",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "LocationModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "445223456"
+    },
     "456853847": {
       "source": "699745446",
       "target": "211572259",
@@ -2548,22 +3185,6 @@
         "targetModuleName": "ConfigHostModule"
       },
       "id": "456853847"
-    },
-    "475156980": {
-      "source": "-1109693554",
-      "target": "-171084127",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "DevtoolsModule",
-        "sourceClassName": "CONFIGURABLE_MODULE_OPTIONS[0e5aa874802abd39771b2]",
-        "targetClassName": "MyConfigService",
-        "sourceClassToken": "CONFIGURABLE_MODULE_OPTIONS[0e5aa874802abd39771b2]",
-        "targetClassToken": "MyConfigService",
-        "targetModuleName": "MyConfigModule",
-        "keyOrIndex": 0,
-        "injectionType": "constructor"
-      },
-      "id": "475156980"
     },
     "476007595": {
       "source": "1295205016",
@@ -2585,6 +3206,22 @@
       },
       "id": "534578584"
     },
+    "557311570": {
+      "source": "1221471905",
+      "target": "-171084127",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "DriverModule",
+        "sourceClassName": "DriverService",
+        "targetClassName": "MyConfigService",
+        "sourceClassToken": "DriverService",
+        "targetClassToken": "MyConfigService",
+        "targetModuleName": "MyConfigModule",
+        "keyOrIndex": 3,
+        "injectionType": "constructor"
+      },
+      "id": "557311570"
+    },
     "561408245": {
       "source": "-1033621697",
       "target": "211572259",
@@ -2594,6 +3231,32 @@
         "targetModuleName": "ConfigHostModule"
       },
       "id": "561408245"
+    },
+    "563952771": {
+      "source": "-1897890093",
+      "target": "92420881",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "MongooseModule",
+        "sourceClassName": "UserVehicleModel",
+        "targetClassName": "DatabaseConnection",
+        "sourceClassToken": "UserVehicleModel",
+        "targetClassToken": "DatabaseConnection",
+        "targetModuleName": "MongooseCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "563952771"
+    },
+    "564990693": {
+      "source": "1370223169",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "564990693"
     },
     "584509253": {
       "source": "-1854488871",
@@ -2614,6 +3277,22 @@
         "targetModuleName": "InternalCoreModule"
       },
       "id": "584653416"
+    },
+    "593083541": {
+      "source": "547335864",
+      "target": "1840551787",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "UserModule",
+        "sourceClassName": "TokenBlacklistGuard",
+        "targetClassName": "AdminUserService",
+        "sourceClassToken": "TokenBlacklistGuard",
+        "targetClassToken": "AdminUserService",
+        "targetModuleName": "AdminuserModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "593083541"
     },
     "608766232": {
       "source": "-1350909915",
@@ -2680,6 +3359,16 @@
       },
       "id": "686711128"
     },
+    "725658169": {
+      "source": "46139094",
+      "target": "1370223169",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SqsProcessorModule",
+        "targetModuleName": "DriverModule"
+      },
+      "id": "725658169"
+    },
     "727876675": {
       "source": "-207939746",
       "target": "-1762913784",
@@ -2695,6 +3384,16 @@
       },
       "id": "727876675"
     },
+    "750211886": {
+      "source": "-1854488869",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "750211886"
+    },
     "751827165": {
       "source": "1916799540",
       "target": "555176277",
@@ -2704,6 +3403,16 @@
         "targetModuleName": "InternalCoreModule"
       },
       "id": "751827165"
+    },
+    "753411336": {
+      "source": "-448338351",
+      "target": "124891751",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "MyConfigModule"
+      },
+      "id": "753411336"
     },
     "784525888": {
       "source": "-536515674",
@@ -2725,21 +3434,47 @@
       },
       "id": "805244905"
     },
-    "827844331": {
-      "source": "1688619051",
-      "target": "-1109693554",
+    "857630689": {
+      "source": "1897612216",
+      "target": "1840551787",
       "metadata": {
         "type": "class-to-class",
-        "sourceModuleName": "DevtoolsModule",
-        "sourceClassName": "DevtoolsHttpServerHost",
-        "targetClassName": "CONFIGURABLE_MODULE_OPTIONS[0e5aa874802abd39771b2]",
-        "sourceClassToken": "DevtoolsHttpServerHost",
-        "targetClassToken": "CONFIGURABLE_MODULE_OPTIONS[0e5aa874802abd39771b2]",
-        "targetModuleName": "DevtoolsModule",
-        "keyOrIndex": 2,
+        "sourceModuleName": "UserModule",
+        "sourceClassName": "CurrentUserInterceptor",
+        "targetClassName": "AdminUserService",
+        "sourceClassToken": "CurrentUserInterceptor",
+        "targetClassToken": "AdminUserService",
+        "targetModuleName": "AdminuserModule",
+        "keyOrIndex": 0,
         "injectionType": "constructor"
       },
-      "id": "827844331"
+      "id": "857630689"
+    },
+    "858808153": {
+      "source": "378321585",
+      "target": "-136838252",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RideModule",
+        "sourceClassName": "DriverService",
+        "targetClassName": "DriverRideModel",
+        "sourceClassToken": "DriverService",
+        "targetClassToken": "DriverRideModel",
+        "targetModuleName": "MongooseModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "858808153"
+    },
+    "877543340": {
+      "source": "-1854488869",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "877543340"
     },
     "885995333": {
       "source": "-868033264",
@@ -2892,6 +3627,22 @@
       },
       "id": "965984492"
     },
+    "1004011471": {
+      "source": "-8925503",
+      "target": "1221471905",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "SqsProcessorModule",
+        "sourceClassName": "SqsProcessorService",
+        "targetClassName": "DriverService",
+        "sourceClassToken": "SqsProcessorService",
+        "targetClassToken": "DriverService",
+        "targetModuleName": "DriverModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "1004011471"
+    },
     "1028357956": {
       "source": "373235992",
       "target": "-438112115",
@@ -3000,6 +3751,16 @@
       },
       "id": "1178621493"
     },
+    "1188514513": {
+      "source": "-29283122",
+      "target": "124891751",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "LocationModule",
+        "targetModuleName": "MyConfigModule"
+      },
+      "id": "1188514513"
+    },
     "1201794055": {
       "source": "1840551787",
       "target": "1539183592",
@@ -3062,6 +3823,42 @@
       },
       "id": "1288625389"
     },
+    "1291717838": {
+      "source": "378321585",
+      "target": "-1897890093",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RideModule",
+        "sourceClassName": "DriverService",
+        "targetClassName": "UserVehicleModel",
+        "sourceClassToken": "DriverService",
+        "targetClassToken": "UserVehicleModel",
+        "targetModuleName": "MongooseModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "1291717838"
+    },
+    "1298751466": {
+      "source": "-448338351",
+      "target": "-1537098012",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "UserModule"
+      },
+      "id": "1298751466"
+    },
+    "1324862835": {
+      "source": "1370223169",
+      "target": "983335831",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "SnsModule"
+      },
+      "id": "1324862835"
+    },
     "1325305494": {
       "source": "-868033264",
       "target": "374240182",
@@ -3093,6 +3890,16 @@
       },
       "id": "1346890576"
     },
+    "1369585507": {
+      "source": "1370223169",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "1369585507"
+    },
     "1377159453": {
       "source": "-2045439487",
       "target": "-1684650937",
@@ -3108,6 +3915,22 @@
         "injectionType": "constructor"
       },
       "id": "1377159453"
+    },
+    "1393650989": {
+      "source": "1221471905",
+      "target": "-118175903",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "DriverModule",
+        "sourceClassName": "DriverService",
+        "targetClassName": "UserVehicleModel",
+        "sourceClassToken": "DriverService",
+        "targetClassToken": "UserVehicleModel",
+        "targetModuleName": "MongooseModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "1393650989"
     },
     "1414936007": {
       "source": "-536515674",
@@ -3217,6 +4040,16 @@
       },
       "id": "1589525445"
     },
+    "1605308618": {
+      "source": "-19112576",
+      "target": "1370223169",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "DriverModule"
+      },
+      "id": "1605308618"
+    },
     "1606060785": {
       "source": "1688619051",
       "target": "-1904419534",
@@ -3317,6 +4150,16 @@
       },
       "id": "1803845902"
     },
+    "1819223887": {
+      "source": "1370223169",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "1819223887"
+    },
     "1820780491": {
       "source": "373673467",
       "target": "-949539487",
@@ -3326,6 +4169,16 @@
         "targetModuleName": "CacheModule"
       },
       "id": "1820780491"
+    },
+    "1840589605": {
+      "source": "-448338351",
+      "target": "-1854488869",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "MongooseModule"
+      },
+      "id": "1840589605"
     },
     "1847460236": {
       "source": "-214388688",
@@ -3412,6 +4265,38 @@
       },
       "id": "1970164251"
     },
+    "1977594911": {
+      "source": "378321585",
+      "target": "-480609343",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RideModule",
+        "sourceClassName": "DriverService",
+        "targetClassName": "LocationService",
+        "sourceClassToken": "DriverService",
+        "targetClassToken": "LocationService",
+        "targetModuleName": "LocationModule",
+        "keyOrIndex": 2,
+        "injectionType": "constructor"
+      },
+      "id": "1977594911"
+    },
+    "2050548480": {
+      "source": "675310842",
+      "target": "1840551787",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "UserModule",
+        "sourceClassName": "IsBlockedGuard",
+        "targetClassName": "AdminUserService",
+        "sourceClassToken": "IsBlockedGuard",
+        "targetClassToken": "AdminUserService",
+        "targetModuleName": "AdminuserModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "2050548480"
+    },
     "2063431619": {
       "source": "-214388688",
       "target": "1160402754",
@@ -3436,6 +4321,16 @@
         "targetModuleName": "ConfigHostModule"
       },
       "id": "2071277264"
+    },
+    "2075530288": {
+      "source": "-1854488870",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "2075530288"
     },
     "2100140299": {
       "source": "-19112576",
@@ -3605,6 +4500,38 @@
       },
       "id": "-168566419"
     },
+    "-1695377775": {
+      "source": "-480609343",
+      "target": "-171084127",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "LocationModule",
+        "sourceClassName": "LocationService",
+        "targetClassName": "MyConfigService",
+        "sourceClassToken": "LocationService",
+        "targetClassToken": "MyConfigService",
+        "targetModuleName": "MyConfigModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1695377775"
+    },
+    "-1234273007": {
+      "source": "1930812539",
+      "target": "-171084127",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "DevtoolsModule",
+        "sourceClassName": "CONFIGURABLE_MODULE_OPTIONS[89f6f9b2f7375d4d66910]",
+        "targetClassName": "MyConfigService",
+        "sourceClassToken": "CONFIGURABLE_MODULE_OPTIONS[89f6f9b2f7375d4d66910]",
+        "targetClassToken": "MyConfigService",
+        "targetModuleName": "MyConfigModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1234273007"
+    },
     "-1609063867": {
       "source": "1688619051",
       "target": "373235992",
@@ -3620,6 +4547,22 @@
         "injectionType": "constructor"
       },
       "id": "-1609063867"
+    },
+    "-259247734": {
+      "source": "1688619051",
+      "target": "1930812539",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "DevtoolsModule",
+        "sourceClassName": "DevtoolsHttpServerHost",
+        "targetClassName": "CONFIGURABLE_MODULE_OPTIONS[89f6f9b2f7375d4d66910]",
+        "sourceClassToken": "DevtoolsHttpServerHost",
+        "targetClassToken": "CONFIGURABLE_MODULE_OPTIONS[89f6f9b2f7375d4d66910]",
+        "targetModuleName": "DevtoolsModule",
+        "keyOrIndex": 2,
+        "injectionType": "constructor"
+      },
+      "id": "-259247734"
     },
     "-2030476078": {
       "source": "1539183592",
@@ -3653,6 +4596,54 @@
       },
       "id": "-1383719811"
     },
+    "-1605209698": {
+      "source": "-118175903",
+      "target": "92420881",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "MongooseModule",
+        "sourceClassName": "UserVehicleModel",
+        "targetClassName": "DatabaseConnection",
+        "sourceClassToken": "UserVehicleModel",
+        "targetClassToken": "DatabaseConnection",
+        "targetModuleName": "MongooseCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1605209698"
+    },
+    "-1927291652": {
+      "source": "-1948743582",
+      "target": "92420881",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "MongooseModule",
+        "sourceClassName": "DriverRideModel",
+        "targetClassName": "DatabaseConnection",
+        "sourceClassToken": "DriverRideModel",
+        "targetClassToken": "DatabaseConnection",
+        "targetModuleName": "MongooseCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1927291652"
+    },
+    "-350507949": {
+      "source": "-136838252",
+      "target": "92420881",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "MongooseModule",
+        "sourceClassName": "DriverRideModel",
+        "targetClassName": "DatabaseConnection",
+        "sourceClassToken": "DriverRideModel",
+        "targetClassToken": "DatabaseConnection",
+        "targetModuleName": "MongooseCoreModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-350507949"
+    },
     "-1928173": {
       "source": "139746697",
       "target": "1070370213",
@@ -3668,6 +4659,38 @@
         "injectionType": "constructor"
       },
       "id": "-1928173"
+    },
+    "-690968746": {
+      "source": "1221471905",
+      "target": "-1948743582",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "DriverModule",
+        "sourceClassName": "DriverService",
+        "targetClassName": "DriverRideModel",
+        "sourceClassToken": "DriverService",
+        "targetClassToken": "DriverRideModel",
+        "targetModuleName": "MongooseModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "-690968746"
+    },
+    "-1988186794": {
+      "source": "378321585",
+      "target": "-171084127",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RideModule",
+        "sourceClassName": "DriverService",
+        "targetClassName": "MyConfigService",
+        "sourceClassToken": "DriverService",
+        "targetClassToken": "MyConfigService",
+        "targetModuleName": "MyConfigModule",
+        "keyOrIndex": 3,
+        "injectionType": "constructor"
+      },
+      "id": "-1988186794"
     },
     "-1572673369": {
       "source": "1840551787",
@@ -3790,6 +4813,26 @@
         "targetModuleName": "TokenModule"
       },
       "id": "-1253354590"
+    },
+    "-1394248128": {
+      "source": "-19112576",
+      "target": "-448338351",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "RideModule"
+      },
+      "id": "-1394248128"
+    },
+    "-1454780167": {
+      "source": "-19112576",
+      "target": "-29283122",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "LocationModule"
+      },
+      "id": "-1454780167"
     },
     "-815553404": {
       "source": "-19112576",
@@ -3971,6 +5014,16 @@
       },
       "id": "-238973953"
     },
+    "-848378715": {
+      "source": "-1537098012",
+      "target": "-743695879",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "UserModule",
+        "targetModuleName": "AdminuserModule"
+      },
+      "id": "-848378715"
+    },
     "-837325887": {
       "source": "-1537098012",
       "target": "1712628187",
@@ -4030,116 +5083,6 @@
         "targetModuleName": "MongooseCoreModule"
       },
       "id": "-1121554618"
-    },
-    "-57433111": {
-      "source": "983335831",
-      "target": "124891751",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SnsModule",
-        "targetModuleName": "MyConfigModule"
-      },
-      "id": "-57433111"
-    },
-    "-1129402090": {
-      "source": "983335831",
-      "target": "1712628187",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SnsModule",
-        "targetModuleName": "ConfigModule"
-      },
-      "id": "-1129402090"
-    },
-    "-896421681": {
-      "source": "983335831",
-      "target": "211572259",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SnsModule",
-        "targetModuleName": "ConfigHostModule"
-      },
-      "id": "-896421681"
-    },
-    "-343602822": {
-      "source": "983335831",
-      "target": "-1350909915",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SnsModule",
-        "targetModuleName": "MongooseCoreModule"
-      },
-      "id": "-343602822"
-    },
-    "-1198477782": {
-      "source": "1916799540",
-      "target": "124891751",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SqsModule",
-        "targetModuleName": "MyConfigModule"
-      },
-      "id": "-1198477782"
-    },
-    "-2130143169": {
-      "source": "1916799540",
-      "target": "-949539487",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SqsModule",
-        "targetModuleName": "CacheModule"
-      },
-      "id": "-2130143169"
-    },
-    "-2055674949": {
-      "source": "1916799540",
-      "target": "-1350909915",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SqsModule",
-        "targetModuleName": "MongooseCoreModule"
-      },
-      "id": "-2055674949"
-    },
-    "-1866221447": {
-      "source": "46139094",
-      "target": "-1537098012",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SqsProcessorModule",
-        "targetModuleName": "UserModule"
-      },
-      "id": "-1866221447"
-    },
-    "-112471128": {
-      "source": "46139094",
-      "target": "555176277",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SqsProcessorModule",
-        "targetModuleName": "InternalCoreModule"
-      },
-      "id": "-112471128"
-    },
-    "-1299341280": {
-      "source": "46139094",
-      "target": "1712628187",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SqsProcessorModule",
-        "targetModuleName": "ConfigModule"
-      },
-      "id": "-1299341280"
-    },
-    "-1676135306": {
-      "source": "46139094",
-      "target": "-949539487",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "SqsProcessorModule",
-        "targetModuleName": "CacheModule"
-      },
-      "id": "-1676135306"
     },
     "-1173122601": {
       "source": "-743695879",
@@ -4330,6 +5273,286 @@
         "targetModuleName": "CacheModule"
       },
       "id": "-2121949613"
+    },
+    "-57433111": {
+      "source": "983335831",
+      "target": "124891751",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SnsModule",
+        "targetModuleName": "MyConfigModule"
+      },
+      "id": "-57433111"
+    },
+    "-1129402090": {
+      "source": "983335831",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SnsModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-1129402090"
+    },
+    "-896421681": {
+      "source": "983335831",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SnsModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-896421681"
+    },
+    "-343602822": {
+      "source": "983335831",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SnsModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-343602822"
+    },
+    "-1198477782": {
+      "source": "1916799540",
+      "target": "124891751",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SqsModule",
+        "targetModuleName": "MyConfigModule"
+      },
+      "id": "-1198477782"
+    },
+    "-2130143169": {
+      "source": "1916799540",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SqsModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-2130143169"
+    },
+    "-2055674949": {
+      "source": "1916799540",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SqsModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-2055674949"
+    },
+    "-1866221447": {
+      "source": "46139094",
+      "target": "-1537098012",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SqsProcessorModule",
+        "targetModuleName": "UserModule"
+      },
+      "id": "-1866221447"
+    },
+    "-112471128": {
+      "source": "46139094",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SqsProcessorModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-112471128"
+    },
+    "-1299341280": {
+      "source": "46139094",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SqsProcessorModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-1299341280"
+    },
+    "-1676135306": {
+      "source": "46139094",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "SqsProcessorModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-1676135306"
+    },
+    "-1075967982": {
+      "source": "1370223169",
+      "target": "124891751",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "MyConfigModule"
+      },
+      "id": "-1075967982"
+    },
+    "-1343932364": {
+      "source": "1370223169",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "DriverModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-1343932364"
+    },
+    "-1609155518": {
+      "source": "-1854488870",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-1609155518"
+    },
+    "-754254170": {
+      "source": "-1854488870",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-754254170"
+    },
+    "-172905197": {
+      "source": "-1854488870",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-172905197"
+    },
+    "-965574076": {
+      "source": "-1854488870",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-965574076"
+    },
+    "-135039053": {
+      "source": "-29283122",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "LocationModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-135039053"
+    },
+    "-1707715868": {
+      "source": "-29283122",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "LocationModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-1707715868"
+    },
+    "-311681710": {
+      "source": "-448338351",
+      "target": "1370223169",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "DriverModule"
+      },
+      "id": "-311681710"
+    },
+    "-1018658401": {
+      "source": "-448338351",
+      "target": "-29283122",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "LocationModule"
+      },
+      "id": "-1018658401"
+    },
+    "-836960999": {
+      "source": "-448338351",
+      "target": "555176277",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "InternalCoreModule"
+      },
+      "id": "-836960999"
+    },
+    "-155884487": {
+      "source": "-448338351",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-155884487"
+    },
+    "-566307011": {
+      "source": "-448338351",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-566307011"
+    },
+    "-1977209957": {
+      "source": "-448338351",
+      "target": "-1350909915",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "RideModule",
+        "targetModuleName": "MongooseCoreModule"
+      },
+      "id": "-1977209957"
+    },
+    "-142278404": {
+      "source": "-1854488869",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "-142278404"
+    },
+    "-939031811": {
+      "source": "-1854488869",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-939031811"
+    },
+    "-1922601190": {
+      "source": "-1854488869",
+      "target": "-949539487",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "MongooseModule",
+        "targetModuleName": "CacheModule"
+      },
+      "id": "-1922601190"
     },
     "-1390855488": {
       "source": "-207939746",
@@ -4825,6 +6048,115 @@
         "injectionType": "decorator"
       },
       "id": "-723517486"
+    },
+    "-1374276821": {
+      "source": "809591672",
+      "target": "1764070503",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RideModule",
+        "sourceClassName": "RideController",
+        "targetClassName": "IsBlockedGuard",
+        "sourceClassToken": "RideController",
+        "targetClassToken": "IsBlockedGuard",
+        "targetModuleName": "RideModule",
+        "injectionType": "decorator"
+      },
+      "id": "-1374276821"
+    },
+    "-164503770": {
+      "source": "809591672",
+      "target": "1636095525",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RideModule",
+        "sourceClassName": "RideController",
+        "targetClassName": "TokenBlacklistGuard",
+        "sourceClassToken": "RideController",
+        "targetClassToken": "TokenBlacklistGuard",
+        "targetModuleName": "RideModule",
+        "injectionType": "decorator"
+      },
+      "id": "-164503770"
+    },
+    "-182063302": {
+      "source": "809591672",
+      "target": "-1308595419",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "RideModule",
+        "sourceClassName": "RideController",
+        "targetClassName": "CurrentUserInterceptor",
+        "sourceClassToken": "RideController",
+        "targetClassToken": "CurrentUserInterceptor",
+        "targetModuleName": "RideModule",
+        "injectionType": "decorator"
+      },
+      "id": "-182063302"
+    },
+    "-1226525711": {
+      "source": "128137388",
+      "target": "1539183592",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AdminuserModule",
+        "sourceClassName": "UserInitService",
+        "targetClassName": "AdminUserModel",
+        "sourceClassToken": "UserInitService",
+        "targetClassToken": "AdminUserModel",
+        "targetModuleName": "MongooseModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1226525711"
+    },
+    "-1116232604": {
+      "source": "128137388",
+      "target": "1840551787",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "AdminuserModule",
+        "sourceClassName": "UserInitService",
+        "targetClassName": "AdminUserService",
+        "sourceClassToken": "UserInitService",
+        "targetClassToken": "AdminUserService",
+        "targetModuleName": "AdminuserModule",
+        "keyOrIndex": 1,
+        "injectionType": "constructor"
+      },
+      "id": "-1116232604"
+    },
+    "-950901856": {
+      "source": "1160402754",
+      "target": "1840551787",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "TokenModule",
+        "sourceClassName": "IsBlockedGuard",
+        "targetClassName": "AdminUserService",
+        "sourceClassToken": "IsBlockedGuard",
+        "targetClassToken": "AdminUserService",
+        "targetModuleName": "AdminuserModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-950901856"
+    },
+    "-1179549503": {
+      "source": "397039684",
+      "target": "1840551787",
+      "metadata": {
+        "type": "class-to-class",
+        "sourceModuleName": "TokenModule",
+        "sourceClassName": "CurrentUserInterceptor",
+        "targetClassName": "AdminUserService",
+        "sourceClassToken": "CurrentUserInterceptor",
+        "targetClassToken": "AdminUserService",
+        "targetModuleName": "AdminuserModule",
+        "keyOrIndex": 0,
+        "injectionType": "constructor"
+      },
+      "id": "-1179549503"
     }
   },
   "entrypoints": {},
@@ -4843,8 +6175,8 @@
         ],
         "name": "AdminUserService"
       },
-      "moduleId": "-1537098012",
-      "nodeId": "675310842"
+      "moduleId": "-448338351",
+      "nodeId": "1764070503"
     }
   }
 }

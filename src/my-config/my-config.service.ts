@@ -65,4 +65,20 @@ export class MyConfigService {
   getNodeEnv(): string {
     return this.configService.get<string>('NODE_ENV');
   }
+
+  getGoogleMapsGeocodeKey(): string {
+    return this.configService.get<string>('google_maps_geocode_Key');
+  }
+
+  getGoogleMapsPlacesKey(): string {
+    return this.configService.get<string>('google_maps_place_key');
+  }
+
+  getGoogleMapsRoutesKey(): string {
+    return this.configService.get<string>('google_maps_routes_key');
+  }
+
+  getAverageFuelCost(): string {
+    return this.configService.get<string>('AVG_FUEL_COST');
+  }
 }
